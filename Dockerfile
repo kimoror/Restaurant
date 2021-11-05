@@ -10,4 +10,7 @@ RUN a2enmod authn_dbd
 RUN a2enmod socache_shmcb
 RUN a2enmod authn_socache
 RUN service apache2 restart foreground
-RUN apache2ctl -M 
+RUN apache2ctl -M
+RUN pecl install -o -f redis \
+&& rm -rf /tmp/pear \
+&& docker-php-ext-enable redis

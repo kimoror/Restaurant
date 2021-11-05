@@ -16,5 +16,6 @@ foreach ($result as $row){
     echo "<tr><td>{$row['id']}</td><td>{$row['name']}</td><td>{$row['price']}</td></tr>";
 }
 ?>
+    <h1><a href=<?php echo $_SERVER['HTTP_REFERER'] ?>>Назад</a></h1>
 </table>
 </body>
